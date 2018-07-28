@@ -1,0 +1,10 @@
+{% if all_questions %}
+    <h3>List of Querys!!!!</h3>
+    <ul>
+        {% for questions in all_questions %}
+        <li><a href = "{% url 'myusic:detail' questions.id %}"> {{questions.question_title}} </a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>Enter the First Query</h3>
+{% endif %}
